@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	function addToCart(tax,price)
+{
+ if(!this.total)
+ {
+  this.total=0;
+ }
+this.total=this.total+tax+price;
+return this.name+"current total is" +this.total;
+}
+var smith ={
+        name: 'smith'};
+
+var john ={
+         name: 'john'
+         };
+var smithcart = addToCart.call(smith,20,30);
+var johncart = addToCart.apply(smith,30,70);
+console.log(smithcart);
+</script>
+</body>
+</html>
